@@ -1,6 +1,6 @@
 <?php
 
-class MappleConfig{
+class MapplicConfig{
 	
 	//,location.json',path to data JSON file or inline JSON object (relative to the HTML file). Use inline JSON objects if the application is not running on web server (see canada.html for example).
 	public $source = 'location.json';

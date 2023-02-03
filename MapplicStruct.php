@@ -1,13 +1,13 @@
 <?php
 
-class MappleStruct{
+class MapplicStruct{
 	/*
 	*/
 	//width of the map file(s) in pixels.
-	public $mapwidth;
+	public $mapwidth = 1600;
 	
 	//height of the map file(s) in pixels.
-	public $mapheight;
+	public $mapheight = 900;
 	
 	//map file's bottommost latitude
 	public $bottomLat;
@@ -33,6 +33,17 @@ class MappleStruct{
 	//list of locations on the level.
 	public $locations = [];
 
+	// save loc id 
+	protected $locationIds = [];
+
+	/**
+	 * Get 	/*
+	 */ 
+	public function appendLocations($locations){
+		$this->locations[] = $locations;
+		return $this;
+	}
+	
 	/**
 	 * Get 	/*
 	 */ 
