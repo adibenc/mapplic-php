@@ -22,9 +22,9 @@ $description = "Lot 1 Description";
 $ml = new Location($id, $title, $description);
 // preson($ml);
 
-$ms->appendLocations($ml);
-$ms->appendLocations($ml);
-$ms->appendLocations($ml);
+$ms->appendLocation($ml);
+$ms->appendLocation($ml);
+$ms->appendLocation($ml);
 
 // preson($ms);
 ```
@@ -41,43 +41,49 @@ json of `$ms` @ `json_encode($ms)`.
     "rightLng": null,
     "styles": [],
     "groups": [],
-    "levels": [],
-    "locations": [
+    "levels": [
         {
-            "id": 1,
-            "title": "Lot 1",
-            "about": null,
-            "description": "Lot 1 Description",
-            "pin": null,
-            "label": null,
-            "category": null,
-            "link": null,
-            "x": 1,
-            "y": 1
-        },
-        {
-            "id": 1,
-            "title": "Lot 1",
-            "about": null,
-            "description": "Lot 1 Description",
-            "pin": null,
-            "label": null,
-            "category": null,
-            "link": null,
-            "x": 1,
-            "y": 1
-        },
-        {
-            "id": 1,
-            "title": "Lot 1",
-            "about": null,
-            "description": "Lot 1 Description",
-            "pin": null,
-            "label": null,
-            "category": null,
-            "link": null,
-            "x": 1,
-            "y": 1
+            "id": 0,
+            "title": "loc1",
+            "map": null,
+            "locations": [
+                {
+                    "id": 1,
+                    "title": "Lot 1",
+                    "about": null,
+                    "description": "Lot 1 Description",
+                    "pin": null,
+                    "label": null,
+                    "category": null,
+                    "link": null,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "id": 1,
+                    "title": "Lot 1",
+                    "about": null,
+                    "description": "Lot 1 Description",
+                    "pin": null,
+                    "label": null,
+                    "category": null,
+                    "link": null,
+                    "x": 1,
+                    "y": 1
+                },
+                {
+                    "id": 1,
+                    "title": "Lot 1",
+                    "about": null,
+                    "description": "Lot 1 Description",
+                    "pin": null,
+                    "label": null,
+                    "category": null,
+                    "link": null,
+                    "x": 1,
+                    "y": 1
+                }
+            ]
         }
     ]
 }

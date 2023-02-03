@@ -32,23 +32,34 @@ class Struct{
 	//"levels [] - list of levels (floors). At least one level is required for a working map."
 	public $levels = [];
 	
-	//list of locations on the level.
-	public $locations = [];
-
-	// save loc id 
-	protected $locationIds = [];
-
 	/**
 	 * append location
 	 * todo:
 	 * 	- uniq id generation
 	 * 
 	 */ 
-	public function appendLocations($locations){
-		$this->locations[] = $locations;
+	public function appendLocation($location){
+		return $this->appendLocations([$location]);
+	}
+
+	/**
+	 * append location to levels 0
+	 * if levels[0] = null, then init 
+	 * 
+	 * todo:
+	 * 	- uniq id generation
+	 * 
+	 */ 
+	public function appendLocations($locations, $levelIdx=0){
+		if(sizeof($this->levels) < 1){
+			$this->levels[] = new Levels(0, "loc1");
+		}
+		$this->levels[$levelIdx]->appendLocations($locations);
+
+		// $this->locations[] = $locations;
 		return $this;
 	}
-	
+
 	/**
 	 * Get 	/*
 	 */ 
@@ -225,26 +236,6 @@ class Struct{
 	public function setLevels($levels)
 	{
 		$this->levels = $levels;
-
-		return $this;
-	}
-
-	/**
-	 * Get the value of locations
-	 */ 
-	public function getLocations()
-	{
-		return $this->locations;
-	}
-
-	/**
-	 * Set the value of locations
-	 *
-	 * @return  self
-	 */ 
-	public function setLocations($locations)
-	{
-		$this->locations = $locations;
 
 		return $this;
 	}

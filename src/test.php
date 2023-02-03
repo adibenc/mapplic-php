@@ -23,9 +23,9 @@ $description = "Lot 1 Description";
 $ml = new Location($id, $title, $description);
 preson($ml);
 
-$ms->appendLocations($ml);
-$ms->appendLocations($ml);
-$ms->appendLocations($ml);
+$ms->appendLocation($ml);
+$ms->appendLocation($ml);
+$ms->appendLocation($ml);
 
 preson($ms);
 // */
