@@ -27,5 +27,7 @@ $ms->appendLocation($ml);
 $ms->appendLocation($ml);
 $ms->appendLocation($ml);
 
+$ms->appendLocations([$ml, $ml, $ml]);
+
 preson($ms);
 // */
