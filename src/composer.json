@@ -1,0 +1,17 @@
+{
+    "name": "adib-enc/mapplic-php",
+    "description": "A mapplic js lib for php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "M Adib zamzam",
+            "email": "adib35785@mail.ru"
+        }
+    ],
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {"adib-enc\\Mapplic\\": "src/"}
+    },
+    "require": {}
+}

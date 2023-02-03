@@ -1,6 +1,8 @@
 <?php
 
-class MapplicStruct{
+namespace Mapplic;
+
+class Struct{
 	/*
 	*/
 	//width of the map file(s) in pixels.
@@ -37,7 +39,10 @@ class MapplicStruct{
 	protected $locationIds = [];
 
 	/**
-	 * Get 	/*
+	 * append location
+	 * todo:
+	 * 	- uniq id generation
+	 * 
 	 */ 
 	public function appendLocations($locations){
 		$this->locations[] = $locations;

@@ -1,6 +1,8 @@
 <?php
 
-class MapplicEntity{
+namespace Mapplic;
+
+class Entity{
 	// generate uuid
 	// https://stackoverflow.com/questions/2040240/php-function-to-generate-v4-uuid
 	public static function UUID($data = null){

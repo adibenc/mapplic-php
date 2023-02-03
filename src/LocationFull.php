@@ -1,6 +1,8 @@
 <?php
 
-class MapplicLocationFull{
+namespace Mapplic;
+
+class LocationFull{
 	// public $id = 1;
 	// public $title = 1;
 	// public $description = 1;
