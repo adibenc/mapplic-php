@@ -7,6 +7,7 @@ include_once(__DIR__."/autoload.php");
 // $mc = new Config();
 // preson($mc);
 
+use Mapplic\Levels;
 use Mapplic\Struct;
 use Mapplic\Location;
 use Mapplic\LocationFull;
@@ -21,9 +22,14 @@ $description = "Lot 1 Description";
 // $y = 1;
 
 // , $x, $y
+$level = new Levels(0, "level1", "map.svg");
+$ms->appendLevel($level);
+
+// preout($ms);
+// exit;
+
 $ml = new Location($id, $title, $description);
 $mlfull = new LocationFull($id, $title, $description);
-preson($ml);
 
 $ms->appendLocation($ml);
 $ms->appendLocation($ml);

@@ -2,9 +2,7 @@
 
 namespace Mapplic;
 
-class Levels{
-	public $id;  // required,unique ID of the location. This will appear in the deeplinking URL and you can link a location with an SVG element using this field.
-	public $title;  // required,- title of the location, displayed in sidebar and popup.
+class Levels extends Entity{
 	
 	public $map;  // optional,short text displayed in sidebar.
 
@@ -14,8 +12,9 @@ class Levels{
 	// save loc id 
 	protected $locationIds = [];
 
-	function __construct($id, $title) {
-		$this->setId($id)
+	function __construct($id, $title, $map) {
+		$this->setMap($map)
+			->setId($id)
 			->setTitle($title);
 	}
 
@@ -63,46 +62,6 @@ class Levels{
 	}
 
 	/**
-	 * Get the value of id
-	 */ 
-	public function getId()
-	{
-		return $this->id;
-	}
-
-	/**
-	 * Set the value of id
-	 *
-	 * @return  self
-	 */ 
-	public function setId($id)
-	{
-		$this->id = $id;
-
-		return $this;
-	}
-
-	/**
-	 * Get the value of title
-	 */ 
-	public function getTitle()
-	{
-		return $this->title;
-	}
-
-	/**
-	 * Set the value of title
-	 *
-	 * @return  self
-	 */ 
-	public function setTitle($title)
-	{
-		$this->title = $title;
-
-		return $this;
-	}
-
-	/**
 	 * Get the value of description
 	 */ 
 	public function getDescription()
@@ -123,88 +82,21 @@ class Levels{
 	}
 
 	/**
-	 * Get the value of pin
+	 * Get the value of map
 	 */ 
-	public function getPin()
+	public function getMap()
 	{
-		return $this->pin;
+		return $this->map;
 	}
 
 	/**
-	 * Set the value of pin
+	 * Set the value of map
 	 *
 	 * @return  self
 	 */ 
-	public function setPin($pin)
+	public function setMap($map)
 	{
-		$this->pin = $pin;
-
-		return $this;
-	}
-
-	/**
-	 * Get the value of style
-	 */ 
-	public function getStyle()
-	{
-		return $this->style;
-	}
-
-	/**
-	 * Set the value of style
-	 *
-	 * @return  self
-	 */ 
-	public function setStyle($style)
-	{
-		$this->style = $style;
-
-		return $this;
-	}
-
-	/**
-	 * Get the value of x
-	 */ 
-	public function getX()
-	{
-		return $this->x;
-	}
-
-	/**
-	 * Set the value of x
-	 *
-	 * @return  self
-	 */ 
-	public function setX($x)
-	{
-		$this->x = $x;
-
-		return $this;
-	}
-
-	/**
-	 * Get the value of y
-	 */ 
-	public function getY()
-	{
-		return $this->y;
-	}
-
-	/**
-	 * Set the value of y
-	 *
-	 * @return  self
-	 */ 
-	public function setY($y)
-	{
-		$this->y = $y;
-
-		return $this;
-	}
-
-	public function setXY($x, $y){
-		$this->x = $x;
-		$this->y = $y;
+		$this->map = $map;
 
 		return $this;
 	}

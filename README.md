@@ -43,13 +43,9 @@ json of `$ms` @ `json_encode($ms)`.
     "groups": [],
     "levels": [
         {
-            "id": 0,
-            "title": "loc1",
-            "map": null,
+            "map": "map.svg",
             "locations": [
                 {
-                    "id": 1,
-                    "title": "Lot 1",
                     "about": null,
                     "description": "Lot 1 Description",
                     "pin": null,
@@ -57,11 +53,11 @@ json of `$ms` @ `json_encode($ms)`.
                     "category": null,
                     "link": null,
                     "x": 1,
-                    "y": 1
+                    "y": 1,
+                    "id": 1,
+                    "title": "Lot 1"
                 },
                 {
-                    "id": 1,
-                    "title": "Lot 1",
                     "about": null,
                     "description": "Lot 1 Description",
                     "pin": null,
@@ -69,11 +65,11 @@ json of `$ms` @ `json_encode($ms)`.
                     "category": null,
                     "link": null,
                     "x": 1,
-                    "y": 1
+                    "y": 1,
+                    "id": 1,
+                    "title": "Lot 1"
                 },
                 {
-                    "id": 1,
-                    "title": "Lot 1",
                     "about": null,
                     "description": "Lot 1 Description",
                     "pin": null,
@@ -81,7 +77,9 @@ json of `$ms` @ `json_encode($ms)`.
                     "category": null,
                     "link": null,
                     "x": 1,
-                    "y": 1
+                    "y": 1,
+                    "id": 1,
+                    "title": "Lot 1"
                 },
                 {
                     "fill": null,
@@ -104,14 +102,14 @@ json of `$ms` @ `json_encode($ms)`.
                     "lat": null,
                     "lng": null,
                     "zoom": null,
-                    "id": 1,
-                    "title": "Lot 1",
                     "about": null,
                     "description": "desc full",
                     "pin": null,
                     "label": null,
                     "category": null,
-                    "link": null
+                    "link": null,
+                    "id": 1,
+                    "title": "Lot 1"
                 },
                 {
                     "fill": null,
@@ -134,16 +132,18 @@ json of `$ms` @ `json_encode($ms)`.
                     "lat": null,
                     "lng": null,
                     "zoom": null,
-                    "id": 1,
-                    "title": "Lot 1",
                     "about": null,
                     "description": "desc full",
                     "pin": null,
                     "label": null,
                     "category": null,
-                    "link": null
+                    "link": null,
+                    "id": 1,
+                    "title": "Lot 1"
                 }
-            ]
+            ],
+            "id": 0,
+            "title": "level1"
         }
     ]
 }

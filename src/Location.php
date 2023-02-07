@@ -2,10 +2,7 @@
 
 namespace Mapplic;
 
-class Location{
-	public $id;  // required,unique ID of the location. This will appear in the deeplinking URL and you can link a location with an SVG element using this field.
-	public $title;  // required,- title of the location, displayed in sidebar and popup.
-	
+class Location extends Entity{
 	public $about;  // optional,short text displayed in sidebar.
 	public $description;  // optional,description displayed in the popup, html content supported. Other location attributes can be nested into the description using the {{attribute}} structure.
 	public $pin;  // optional,type of the pin. This string will be applied as CSS class, so you can add your own styles. For the full list of built-in marker types, please visit the australia.html test page.
@@ -23,46 +20,6 @@ class Location{
 			->setTitle($title)
 			->setDescription($description)
 			->setXY($x, $y);
-	}
-
-	/**
-	 * Get the value of id
-	 */ 
-	public function getId()
-	{
-		return $this->id;
-	}
-
-	/**
-	 * Set the value of id
-	 *
-	 * @return  self
-	 */ 
-	public function setId($id)
-	{
-		$this->id = $id;
-
-		return $this;
-	}
-
-	/**
-	 * Get the value of title
-	 */ 
-	public function getTitle()
-	{
-		return $this->title;
-	}
-
-	/**
-	 * Set the value of title
-	 *
-	 * @return  self
-	 */ 
-	public function setTitle($title)
-	{
-		$this->title = $title;
-
-		return $this;
 	}
 
 	/**

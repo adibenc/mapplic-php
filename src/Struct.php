@@ -38,6 +38,16 @@ class Struct{
 	 * 	- uniq id generation
 	 * 
 	 */ 
+	public function appendLevel($levels){
+		return $this->appendLevels([$levels]);
+	}
+
+	/**
+	 * append location
+	 * todo:
+	 * 	- uniq id generation
+	 * 
+	 */ 
 	public function appendLocation($location){
 		return $this->appendLocations([$location]);
 	}
@@ -52,9 +62,16 @@ class Struct{
 	 */ 
 	public function appendLocations($locations, $levelIdx=0){
 		if(sizeof($this->levels) < 1){
-			$this->levels[] = new Levels(0, "loc1");
+			$this->levels[] = new Levels(0, "loc1", "map.svg");
 		}
 		$this->levels[$levelIdx]->appendLocations($locations);
+
+		// $this->locations[] = $locations;
+		return $this;
+	}
+
+	public function appendLevels($levels){
+		$this->levels = array_values(array_merge($this->levels, $levels));
 
 		// $this->locations[] = $locations;
 		return $this;
