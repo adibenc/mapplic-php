@@ -9,7 +9,7 @@
             "email": "adib35785@mail.ru"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {"adib-enc\\Mapplic\\": "src/"}
     },
