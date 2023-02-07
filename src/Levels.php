@@ -1,6 +1,6 @@
 <?php
 
-namespace Mapplic;
+namespace Adibenc\Mapplic;
 
 class Levels extends Entity{
 	

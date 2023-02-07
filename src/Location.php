@@ -1,6 +1,6 @@
 <?php
 
-namespace Mapplic;
+namespace Adibenc\Mapplic;
 
 class Location extends Entity{
 	public $about;  // optional,short text displayed in sidebar.

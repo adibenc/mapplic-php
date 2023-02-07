@@ -2,15 +2,15 @@
 
 include_once(__DIR__."/autoload.php");
 
-// use Mapplic\Config;
+// use Adibenc\Mapplic\Config;
 
 // $mc = new Config();
 // preson($mc);
 
-use Mapplic\Levels;
-use Mapplic\Struct;
-use Mapplic\Location;
-use Mapplic\LocationFull;
+use Adibenc\Mapplic\Levels;
+use Adibenc\Mapplic\Struct;
+use Adibenc\Mapplic\Location;
+use Adibenc\Mapplic\LocationFull;
 
 $ms = new Struct();
 

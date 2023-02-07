@@ -1,6 +1,6 @@
 <?php
 
-namespace Mapplic;
+namespace Adibenc\Mapplic;
 
 class Entity{
 	// required,unique ID of the location. This will appear in the deeplinking URL and you can link a location with an SVG element using this field.

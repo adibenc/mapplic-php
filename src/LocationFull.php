@@ -1,6 +1,6 @@
 <?php
 
-namespace Mapplic;
+namespace Adibenc\Mapplic;
 
 class LocationFull extends Location{
 	public $fill;  // optional,hex color of the interactive element/colorable pin.
