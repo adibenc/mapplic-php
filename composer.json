@@ -14,5 +14,5 @@
         "psr-4": {"adib-enc\\Mapplic\\": "src/"}
     },
     "require": {},
-    "prefer-stable": true
+    "prefer-stable": false
 }
