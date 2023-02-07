@@ -3,11 +3,18 @@
 @adib-enc
 
 json generator for mapplic js, a JS visual map library.
+## install
+
+```
+composer require adibenc/mapplic-php
+```
 
 ## Example
 ```php
+use Mapplic\Levels;
 use Mapplic\Struct;
 use Mapplic\Location;
+use Mapplic\LocationFull;
 
 $ms = new Struct();
 
@@ -19,12 +26,21 @@ $description = "Lot 1 Description";
 // $y = 1;
 
 // , $x, $y
+$level = new Levels(0, "level1", "map.svg");
+$ms->appendLevel($level);
+
+// preout($ms);
+// exit;
+
 $ml = new Location($id, $title, $description);
-// preson($ml);
+$mlfull = new LocationFull($id, $title, $description);
 
 $ms->appendLocation($ml);
 $ms->appendLocation($ml);
 $ms->appendLocation($ml);
+
+$mlfull->setDescription("desc full");
+$ms->appendLocations([$mlfull, $mlfull]);
 
 // preson($ms);
 ```
