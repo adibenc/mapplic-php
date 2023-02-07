@@ -13,5 +13,6 @@
     "autoload": {
         "psr-4": {"adib-enc\\Mapplic\\": "src/"}
     },
-    "require": {}
+    "require": {},
+    "prefer-stable": true
 }
