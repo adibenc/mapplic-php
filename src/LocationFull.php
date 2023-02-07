@@ -2,24 +2,7 @@
 
 namespace Mapplic;
 
-class LocationFull{
-	// public $id = 1;
-	// public $title = 1;
-	// public $description = 1;
-	// public $pin = null;
-	// public $style = "defaultstyle";
-	// public $x = 1;
-	// public $y = 1;
-
-	public $id;  // required,unique ID of the location. This will appear in the deeplinking URL and you can link a location with an SVG element using this field.
-	public $title;  // required,- title of the location, displayed in sidebar and popup.
-	
-	public $about;  // optional,short text displayed in sidebar.
-	public $description;  // optional,description displayed in the popup, html content supported. Other location attributes can be nested into the description using the {{attribute}} structure.
-	public $pin;  // optional,type of the pin. This string will be applied as CSS class, so you can add your own styles. For the full list of built-in marker types, please visit the australia.html test page.
-	public $label;  // optional,this attribute can be used for adding text or image to a marker that supports labels.
-	public $category;  // optional,ID of the category the location belongs to. There must be a category with this ID.
-	public $link;  // optional,an internal or external link assigned to the location. The action attribute specifies how this will be used. A "More" button appears in the tooltip by default.
+class LocationFull extends Location{
 	public $fill;  // optional,hex color of the interactive element/colorable pin.
 	public $style;  // optional,style assinged to the location element.
 	public $action;  // optional,the action to perform when the location is focused, possible options:
@@ -43,90 +26,10 @@ class LocationFull{
 	public $zoom;  // optional,target zoom level when the location is focused. The default value is 4.
 	// public $reveal;  // optional,reveal location when zoom level is reached
 
-	function __construct($id, $title, $description, $x, $y) {
+	function __construct($id, $title, $description, $x=1, $y=1) {
 		$this->setId($id)
 			->setTitle($title)
 			->setDescription($description);
-	}
-
-	/**
-	 * Get the value of id
-	 */ 
-	public function getId()
-	{
-		return $this->id;
-	}
-
-	/**
-	 * Set the value of id
-	 *
-	 * @return  self
-	 */ 
-	public function setId($id)
-	{
-		$this->id = $id;
-
-		return $this;
-	}
-
-	/**
-	 * Get the value of title
-	 */ 
-	public function getTitle()
-	{
-		return $this->title;
-	}
-
-	/**
-	 * Set the value of title
-	 *
-	 * @return  self
-	 */ 
-	public function setTitle($title)
-	{
-		$this->title = $title;
-
-		return $this;
-	}
-
-	/**
-	 * Get the value of description
-	 */ 
-	public function getDescription()
-	{
-		return $this->description;
-	}
-
-	/**
-	 * Set the value of description
-	 *
-	 * @return  self
-	 */ 
-	public function setDescription($description)
-	{
-		$this->description = $description;
-
-		return $this;
-	}
-
-	/**
-	 * Get the value of pin
-	 */ 
-	public function getPin()
-	{
-		return $this->pin;
-	}
-
-	/**
-	 * Set the value of pin
-	 *
-	 * @return  self
-	 */ 
-	public function setPin($pin)
-	{
-		$this->pin = $pin;
-
-		return $this;
 	}
 
 	/**

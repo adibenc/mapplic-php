@@ -9,6 +9,7 @@ include_once(__DIR__."/autoload.php");
 
 use Mapplic\Struct;
 use Mapplic\Location;
+use Mapplic\LocationFull;
 
 $ms = new Struct();
 
@@ -21,13 +22,15 @@ $description = "Lot 1 Description";
 
 // , $x, $y
 $ml = new Location($id, $title, $description);
+$mlfull = new LocationFull($id, $title, $description);
 preson($ml);
 
 $ms->appendLocation($ml);
 $ms->appendLocation($ml);
 $ms->appendLocation($ml);
 
-$ms->appendLocations([$ml, $ml, $ml]);
+$mlfull->setDescription("desc full");
+$ms->appendLocations([$mlfull, $mlfull]);
 
 preson($ms);
 // */

@@ -3,14 +3,6 @@
 namespace Mapplic;
 
 class Location{
-	// public $id = 1;
-	// public $title = 1;
-	// public $description = 1;
-	// public $pin = null;
-	// public $style = "defaultstyle";
-	// public $x = 1;
-	// public $y = 1;
-
 	public $id;  // required,unique ID of the location. This will appear in the deeplinking URL and you can link a location with an SVG element using this field.
 	public $title;  // required,- title of the location, displayed in sidebar and popup.
 	
@@ -176,6 +168,66 @@ class Location{
 	public function setXY($x, $y){
 		$this->x = $x;
 		$this->y = $y;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of label
+	 */ 
+	public function getLabel()
+	{
+		return $this->label;
+	}
+
+	/**
+	 * Set the value of label
+	 *
+	 * @return  self
+	 */ 
+	public function setLabel($label)
+	{
+		$this->label = $label;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of category
+	 */ 
+	public function getCategory()
+	{
+		return $this->category;
+	}
+
+	/**
+	 * Set the value of category
+	 *
+	 * @return  self
+	 */ 
+	public function setCategory($category)
+	{
+		$this->category = $category;
+
+		return $this;
+	}
+
+	/**
+	 * Get the value of link
+	 */ 
+	public function getLink()
+	{
+		return $this->link;
+	}
+
+	/**
+	 * Set the value of link
+	 *
+	 * @return  self
+	 */ 
+	public function setLink($link)
+	{
+		$this->link = $link;
 
 		return $this;
 	}
